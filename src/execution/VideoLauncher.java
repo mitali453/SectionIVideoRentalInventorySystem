@@ -20,7 +20,7 @@ public class VideoLauncher {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int clientInput;
+        int userInput;
         VideoStore myVideoStore = new VideoStore();
         do {
             System.out.println("MAIN MENU");
@@ -32,10 +32,10 @@ public class VideoLauncher {
             System.out.println("5. List inventory: ");
             System.out.println("6. Exit: ");
             System.out.println("Enter you choice (1..6): ");
-            clientInput = scanner.nextInt();
+            userInput = scanner.nextInt();
             String videoName;
             int rating;
-            switch (clientInput) {
+            switch (userInput) {
                 case ADD_VIDEO:
                     System.out.println("Enter the name of the video that you want to add: ");
                     scanner.nextLine();
@@ -67,7 +67,7 @@ public class VideoLauncher {
                     break;
                 default:
             }
-        } while (clientInput != EXIT);
+        } while (userInput != EXIT);
         scanner.close();
     }
 }
